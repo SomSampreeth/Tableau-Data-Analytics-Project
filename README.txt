@@ -1,1 +1,0 @@
-This is the placeholder for 8. Doc and Demo
