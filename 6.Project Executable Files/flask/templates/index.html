@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Remixicon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+
+  <title>Product Placement</title>
+</head>
+<body class="bg-white text-black">
+
+  <!-- Include your full HTML content here -->
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-green-50 to-green-100 shadow">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="#" class="flex">
+            <img class="w-auto h-20" src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" />
+          </a>
+        </div>
+
+        <!-- Toggle Button -->
+        <button id="menu-toggle" type="button" class="inline-flex p-1 text-black border border-black rounded lg:hidden focus:bg-gray-100 hover:bg-gray-100">
+          <svg id="menu-open-icon" class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="menu-close-icon" class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex ml-auto items-center space-x-10">
+          <a href="#Home" class="text-base font-semibold text-black hover:text-opacity-80">Home</a>
+          <a href="#About" class="text-base font-semibold text-black hover:text-opacity-80">About Us</a>
+          <a href="#HowItWorks" class="text-base font-semibold text-black hover:text-opacity-80">How It Works</a>
+          <a href="#Dashboard" class="text-base font-semibold text-black hover:text-opacity-80">Dashboard</a>
+          <a href="#Story" class="text-base font-semibold text-black hover:text-opacity-80">Story</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-white z-40 px-4 py-6 lg:hidden flex flex-col space-y-4 shadow-md">
+      <a href="#Home" class="text-base font-semibold text-black hover:text-opacity-80">Home</a>
+      <a href="#About" class="text-base font-semibold text-black hover:text-opacity-80">About Us</a>
+      <a href="#HowItWorks" class="text-base font-semibold text-black hover:text-opacity-80">How It Works</a>
+      <a href="#Dashboard" class="text-base font-semibold text-black hover:text-opacity-80">Dashboard</a>
+      <a href="#Story" class="text-base font-semibold text-black hover:text-opacity-80">Story</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="pt-32 py-10 sm:py-16 lg:py-24" id="Home">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div class="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
+        <!-- Right Image -->
+        <div class="order-1 lg:order-2">
+          <img class="w-full" src="{{ url_for('static', filename='images/Gemini_Generated_Image_12mphh12mphh12mp.png') }}" alt="Strategic Placement" />
+        </div>
+
+        <!-- Left Content -->
+        <div class="order-2 lg:order-1">
+          <h1 class="text-4xl font-bold text-black sm:text-6xl lg:text-7xl">
+            Optimize visibility with
+            <div class="relative inline-flex">
+              <span class="absolute inset-x-0 bottom-0 border-b-[30px] border-[#4ADE80]"></span>
+              <h1 class="relative text-4xl font-bold text-black sm:text-6xl lg:text-7xl">Strategic Placement.</h1>
+            </div>
+          </h1>
+          <p class="mt-8 text-base text-black sm:text-xl">
+            Leverage data-driven insights to place your products where they matter most.
+          </p>
+          <div class="mt-10 sm:flex sm:items-center sm:space-x-8">
+            <a href="#" class="inline-flex items-center justify-center px-10 py-4 text-base font-semibold text-white bg-orange-500 hover:bg-orange-600">Get Started</a>
+            <a href="#" class="inline-flex items-center mt-6 text-base font-semibold sm:mt-0 hover:opacity-80">
+              <svg class="w-10 h-10 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path fill="#F97316" stroke="#F97316" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Watch Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-10 bg-gray-100 sm:py-16 lg:py-24" id="About">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+      <div class="grid items-center grid-cols-1 gap-y-8 lg:grid-cols-2 gap-x-16 xl:gap-x-24">
+        <div class="order-2 lg:order-1 relative mb-12">
+          <img class="w-full rounded-md" src="{{ url_for('static', filename='images/about.png') }}" alt="About" />
+        </div>
+        <div class="order-2 lg:order-1">
+          <h2 class="mt-10 text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">About Us</h2>
+          <p class="mt-6 text-lg leading-relaxed text-gray-600">
+            Strategic product placement involves rapidly assessing products to attract consumer attention and optimize sales.
+          </p>
+          <p class="mt-4 text-lg leading-relaxed text-gray-600">
+            We've created an interactive dashboard for supermarket data, covering product categories, sales figures, and store layouts.
+          </p>
+          <p class="mt-4 text-lg leading-relaxed text-gray-600">
+            Our analysis uncovers key patterns that influence buying decisions—such as placing complementary products together to boost sales.
+          </p>
+          <p class="mt-4 text-lg leading-relaxed text-gray-600">
+            This section provides insights into our data analysis process and demonstrates how businesses can apply merchandising tactics effectively.
+          </p>
+          <a href="#" class="inline-flex items-center justify-center px-10 py-4 text-base font-semibold text-white mt-9 bg-gradient-to-r from-fuchsia-600 to-blue-600 hover:opacity-80">Explore more</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="py-10 bg-white sm:py-16 lg:py-24" id="HowItWorks">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">How does it work?</h2>
+        <p class="max-w-lg mx-auto mt-4 text-base leading-relaxed text-gray-600">
+          We simplify strategic product placement by turning raw retail data into actionable insights.
+        </p>
+      </div>
+
+      <div class="relative mt-12 lg:mt-20">
+        <div class="relative grid grid-cols-1 text-center gap-y-12 md:grid-cols-3 gap-x-12">
+          <div>
+            <div class="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
+              <span class="text-xl font-semibold text-gray-700">1</span>
+            </div>
+            <h3 class="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Upload Retail Data</h3>
+            <p class="mt-4 text-base text-gray-600">Start by uploading your store’s product, category, and sales data. We support CSV and Excel formats.</p>
+          </div>
+          <div>
+            <div class="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
+              <span class="text-xl font-semibold text-gray-700">2</span>
+            </div>
+            <h3 class="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Analyze & Visualize</h3>
+            <p class="mt-4 text-base text-gray-600">We uncover placement patterns and trends using interactive dashboards.</p>
+          </div>
+          <div>
+            <div class="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
+              <span class="text-xl font-semibold text-gray-700">3</span>
+            </div>
+            <h3 class="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Deploy & Optimize</h3>
+            <p class="mt-4 text-base text-gray-600">Use insights to improve shelf strategy and boost sales with visual storyboards.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dashboard -->
+  <section id="Dashboard" class="px-4 py-10 sm:py-16 lg:py-24 bg-gray-100">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">Strategic Product Placement Dashboard</h2>
+      <div class="tableauPlaceholder w-full" id="vizDashboard" style="position: relative;">
+        <object class="tableauViz" style="display: none">
+          <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+          <param name="embed_code_version" value="3" />
+          <param name="site_root" value="" />
+          <param name="name" value="project_17506829417280/FinalDashboard" />
+          <param name="tabs" value="no" />
+          <param name="toolbar" value="yes" />
+        </object>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story -->
+  <section id="Story" class="px-4 py-10 sm:py-16 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">Product Insights Story</h2>
+      <div class="tableauPlaceholder w-full" id="vizStory" style="position: relative;">
+        <object class="tableauViz" style="display: none">
+          <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+          <param name="embed_code_version" value="3" />
+          <param name="path" value="shared/5DY4PRN6C" />
+          <param name="toolbar" value="yes" />
+        </object>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer and CTA -->
+  <footer class="bg-white py-10 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-6 leading-tight">
+          Ready to elevate your product visibility?<br />
+          Let’s collaborate and build smarter campaigns.
+        </h2>
+        <button class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-green-700 to-green-900 rounded-md">
+          <a href="#Dashboard">Get Started</a>
+        </button>
+      </div>
+
+      <hr class="border-gray-200 mb-10" />
+
+      <div class="flex flex-col sm:flex-row justify-between items-center text-center sm:text-left">
+        <div class="mb-6 sm:mb-0">
+          <a href="#" class="text-gray-800 font-bold text-lg">StrategicPlacement</a>
+        </div>
+
+        <nav class="flex flex-wrap justify-center sm:justify-start space-x-6 sm:space-x-10 mb-6 sm:mb-0">
+          <a href="#About" class="text-gray-600 hover:text-gray-900">About</a>
+          <a href="#HowItWorks" class="text-gray-600 hover:text-gray-900">How It Works</a>
+          <a href="#Dashboard" class="text-gray-600 hover:text-gray-900">Dashboard</a>
+          <a href="#Story" class="text-gray-600 hover:text-gray-900">Story</a>
+        </nav>
+
+        <div class="flex space-x-4 mb-6 sm:mb-0">
+          <a href="#"><i class="ri-linkedin-fill text-xl text-gray-600 hover:text-gray-900"></i></a>
+          <a href="#"><i class="ri-twitter-x-fill text-xl text-gray-600 hover:text-gray-900"></i></a>
+          <a href="#"><i class="ri-youtube-fill text-xl text-gray-600 hover:text-gray-900"></i></a>
+          <a href="#"><i class="ri-mail-line text-xl text-gray-600 hover:text-gray-900"></i></a>
+        </div>
+      </div>
+
+      <hr class="border-gray-200 mt-10 mb-6" />
+      <div class="text-center text-sm text-gray-500">
+        © 2025 Strategic Product Placement. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
