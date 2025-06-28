@@ -16,6 +16,7 @@ In today’s competitive retail landscape, how and where products are placed has
 📅 **Duration**: 16 June – 25 June 2025
  
   **Team Members & Roles:**
+
 ●	 Thangella Dharmika – Visual Design, Testing  
 ●	 Som Sampreeth – Dashboard Design, Documentation  
 ●	 Kolla Roshan Sree Vathsav – Data Analysis, KPI Integration  
